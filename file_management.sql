@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.0
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 27, 2021 at 04:02 PM
--- Server version: 10.4.18-MariaDB
--- PHP Version: 7.3.27
+-- Generation Time: Nov 17, 2024 at 03:04 PM
+-- Server version: 10.4.32-MariaDB
+-- PHP Version: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -33,14 +33,14 @@ CREATE TABLE `admin_login` (
   `admin_user` text NOT NULL,
   `admin_password` text NOT NULL,
   `admin_status` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `admin_login`
 --
 
 INSERT INTO `admin_login` (`id`, `name`, `admin_user`, `admin_password`, `admin_status`) VALUES
-(13, 'CampCodes', 'admin@campcodes.com', '$2y$12$yjn.g4FtUoXrOqqNMka/Mu/4tq7Brp7Q.aAILGCrjpw.iHKas/uC.', '');
+(13, 'Admin', 'admin@gmail.com', '$2a$12$Ttx8lswZAZNehJzr51GuBeyreVg3moK9hFpWR5Pjw8p1EN01Xgbci', '');
 
 -- --------------------------------------------------------
 
@@ -58,15 +58,22 @@ CREATE TABLE `history_log` (
   `host` text NOT NULL,
   `login_time` varchar(200) NOT NULL,
   `logout_time` varchar(200) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `history_log`
 --
 
 INSERT INTO `history_log` (`log_id`, `id`, `email_address`, `action`, `actions`, `ip`, `host`, `login_time`, `logout_time`) VALUES
-(0, 1, 'nario@gmail.com', 'Has LoggedIn the system at', 'Has LoggedOut the system at', '::1', 'buhayko-PC', 'May-29-2019 02:36 PM', 'May-30-2019 04:33 PM'),
-(0, 1, 'nario@gmail.com', 'Has LoggedIn the system at', 'Has LoggedOut the system at', '::1', 'buhayko-PC', 'May-30-2019 04:30 PM', 'May-30-2019 04:33 PM');
+(0, 3, 'william@gmail.com', 'Has Logged In the system at', 'Has LoggedOut the system at', '::1', 'DESKTOP-AGNJM3Q', 'Nov-17-2024 09:33 AM', 'Nov-17-2024 12:27 PM'),
+(0, 3, 'william@gmail.com', 'Has Logged In the system at', 'Has LoggedOut the system at', '::1', 'DESKTOP-AGNJM3Q', 'Nov-17-2024 09:40 AM', 'Nov-17-2024 12:27 PM'),
+(0, 3, 'william@gmail.com', 'Has Logged In the system at', 'Has LoggedOut the system at', '::1', 'DESKTOP-AGNJM3Q', 'Nov-17-2024 09:42 AM', 'Nov-17-2024 12:27 PM'),
+(0, 3, 'william@gmail.com', 'Has Logged In the system at', 'Has LoggedOut the system at', '::1', 'DESKTOP-AGNJM3Q', 'Nov-17-2024 09:45 AM', 'Nov-17-2024 12:27 PM'),
+(0, 3, 'william@gmail.com', 'Has Logged In the system at', 'Has LoggedOut the system at', '::1', 'DESKTOP-AGNJM3Q', 'Nov-17-2024 10:37 AM', 'Nov-17-2024 12:27 PM'),
+(0, 3, 'william@gmail.com', 'Has Logged In the system at', 'Has LoggedOut the system at', '::1', 'DESKTOP-AGNJM3Q', 'Nov-17-2024 10:46 AM', 'Nov-17-2024 12:27 PM'),
+(0, 3, 'william@gmail.com', 'Has Logged In the system at', 'Has LoggedOut the system at', '::1', 'DESKTOP-AGNJM3Q', 'Nov-17-2024 10:49 AM', 'Nov-17-2024 12:27 PM'),
+(0, 3, 'william@gmail.com', 'Has Logged In the system at', 'Has LoggedOut the system at', '::1', 'DESKTOP-AGNJM3Q', 'Nov-17-2024 11:06 AM', 'Nov-17-2024 12:27 PM'),
+(0, 3, 'william@gmail.com', 'Has Logged In the system at', 'Has LoggedOut the system at', '::1', 'DESKTOP-AGNJM3Q', 'Nov-17-2024 12:09 PM', 'Nov-17-2024 12:27 PM');
 
 -- --------------------------------------------------------
 
@@ -84,19 +91,20 @@ CREATE TABLE `history_log1` (
   `host` text NOT NULL,
   `login_time` varchar(200) NOT NULL,
   `logout_time` varchar(200) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `history_log1`
 --
 
 INSERT INTO `history_log1` (`log_id`, `id`, `admin_user`, `action`, `actions`, `ip`, `host`, `login_time`, `logout_time`) VALUES
-(0, 11, 'richard@gmail.com', 'Has LoggedIn the system at', 'Has LoggedOut the system at', '::1', 'buhayko-PC', 'May-29-2019 02:34 PM', 'May-29-2019 02:35 PM'),
-(0, 12, 'joneltoledo@yahoo.com', 'Has LoggedIn the system at', 'Has LoggedOut the system at', '::1', 'buhayko-PC', 'May-29-2019 02:35 PM', 'Mar-27-2021 10:59 PM'),
-(0, 12, 'joneltoledo@yahoo.com', 'Has LoggedIn the system at', 'Has LoggedOut the system at', '::1', 'buhayko-PC', 'May-29-2019 02:37 PM', 'Mar-27-2021 10:59 PM'),
-(0, 12, 'joneltoledo@yahoo.com', 'Has LoggedIn the system at', 'Has LoggedOut the system at', '::1', 'buhayko-PC', 'May-30-2019 04:33 PM', 'Mar-27-2021 10:59 PM'),
-(0, 12, 'joneltoledo@yahoo.com', 'Has LoggedIn the system at', 'Has LoggedOut the system at', '127.0.0.1', 'keystone.mwbsys.com', 'Mar-27-2021 10:56 PM', 'Mar-27-2021 10:59 PM'),
-(0, 13, 'admin@campcodes.com', 'Has LoggedIn the system at', 'Has LoggedOut the system at', '127.0.0.1', 'keystone.mwbsys.com', 'Mar-27-2021 10:59 PM', 'Mar-27-2021 11:00 PM');
+(0, 13, 'admin@gmail.com', 'Has LoggedIn the system at', 'Has LoggedOut the system at', '::1', 'DESKTOP-AGNJM3Q', 'Nov-17-2024 09:28 AM', 'Nov-17-2024 01:16 PM'),
+(0, 13, 'admin@gmail.com', 'Has LoggedIn the system at', 'Has LoggedOut the system at', '::1', 'DESKTOP-AGNJM3Q', 'Nov-17-2024 09:32 AM', 'Nov-17-2024 01:16 PM'),
+(0, 13, 'admin@gmail.com', 'Has LoggedIn the system at', 'Has LoggedOut the system at', '::1', 'DESKTOP-AGNJM3Q', 'Nov-17-2024 09:34 AM', 'Nov-17-2024 01:16 PM'),
+(0, 13, 'admin@gmail.com', 'Has LoggedIn the system at', 'Has LoggedOut the system at', '::1', 'DESKTOP-AGNJM3Q', 'Nov-17-2024 11:52 AM', 'Nov-17-2024 01:16 PM'),
+(0, 13, 'admin@gmail.com', 'Has LoggedIn the system at', 'Has LoggedOut the system at', '::1', 'DESKTOP-AGNJM3Q', 'Nov-17-2024 11:58 AM', 'Nov-17-2024 01:16 PM'),
+(0, 13, 'admin@gmail.com', 'Has LoggedIn the system at', 'Has LoggedOut the system at', '::1', 'DESKTOP-AGNJM3Q', 'Nov-17-2024 11:59 AM', 'Nov-17-2024 01:16 PM'),
+(0, 13, 'admin@gmail.com', 'Has LoggedIn the system at', 'Has LoggedOut the system at', '::1', 'DESKTOP-AGNJM3Q', 'Nov-17-2024 12:28 PM', 'Nov-17-2024 01:16 PM');
 
 -- --------------------------------------------------------
 
@@ -110,7 +118,14 @@ CREATE TABLE `login_user` (
   `email_address` text NOT NULL,
   `user_password` text NOT NULL,
   `user_status` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+--
+-- Dumping data for table `login_user`
+--
+
+INSERT INTO `login_user` (`id`, `name`, `email_address`, `user_password`, `user_status`) VALUES
+(3, 'william', 'william@gmail.com', '$2y$12$y//9B7GMQBuoyV..bwlHpOOyTu4u77y3bCXnKNPpsinxqKSjQNGhG', '');
 
 -- --------------------------------------------------------
 
@@ -126,15 +141,14 @@ CREATE TABLE `upload_files` (
   `TIMERS` varchar(200) NOT NULL,
   `ADMIN_STATUS` varchar(300) NOT NULL,
   `EMAIL` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `upload_files`
 --
 
 INSERT INTO `upload_files` (`ID`, `NAME`, `SIZE`, `DOWNLOAD`, `TIMERS`, `ADMIN_STATUS`, `EMAIL`) VALUES
-(1, 'ajax_tutorial.pdf', '618379', '0', 'May-29-2019 02:36 PM', 'Employee', 'Email Luis Nario'),
-(2, 'css_tutorial.pdf', '910221', '0', 'May-29-2019 02:36 PM', 'Employee', 'Email Luis Nario');
+(4, 'vtaccounting system.pdf', '1514481', '5', 'Nov-17-2024 09:31 AM', 'Admin', 'Admin');
 
 --
 -- Indexes for dumped tables
@@ -172,13 +186,13 @@ ALTER TABLE `admin_login`
 -- AUTO_INCREMENT for table `login_user`
 --
 ALTER TABLE `login_user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `upload_files`
 --
 ALTER TABLE `upload_files`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
