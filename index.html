@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <title>KCB-LDMS</title>
+<link rel="icon" href="js/img/kcb.jpg" type="image/jpg" sizes="64x64">
+
+
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Material Design Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/@mdi/font/css/materialdesignicons.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link href="css/style.css" rel="stylesheet">
+
+  <style>
+    /* Body with subtle texture background */
+    body {
+      background: #f9f9f9 url('https://www.transparenttextures.com/patterns/diamond-upholstery.png');
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+    }
+
+    /* Loader Styling */
+    #loader {
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.8) url('img/loading.gif') center center no-repeat;
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Navbar Styling */
+    nav {
+      background-color: #4CAF50;
+      padding: 10px 0;
+    }
+
+    .navbar-brand {
+      font-weight: bold;
+      color: #fff;
+    }
+
+    .navbar-nav .nav-link {
+      color: #fff;
+      font-size: 1.1rem;
+      margin-left: 15px;
+    }
+
+    .navbar-nav .nav-link:hover {
+      color: #F0B56F;
+    }
+
+    /* Carousel Styling */
+    .carousel-item img {
+      width: 100%;
+      height: 80vh;
+      object-fit: cover;
+    }
+
+    .carousel-caption {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 15px;
+      border-radius: 8px;
+      margin-bottom: 50px;
+    }
+
+    .carousel-caption h5 {
+      font-size: 1.8rem;
+      color: #f0b56f;
+      font-weight: bold;
+    }
+
+    .carousel-caption p {
+      color: #fff;
+    }
+
+    /* Styling carousel images with a border shape */
+    .carousel-image {
+      border: 5px solid #4CAF50; /* Border color */
+      border-radius: 20px; /* Rounded edges */
+      box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Shadow */
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="js/img/kcb.png" width="60" height="60" alt="KCB Logo">
+        <span class="ms-2">LEGAL DOCUMENT MANAGEMENT SYSTEM</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="login.html"><i class="fas fa-sign-in-alt"></i> User Login</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="/filemanagement/Private_Dashboard/"><i class="fas fa-user-shield"></i> Admin Login</a>
+          </li>
+        </ul>
+        
+      </div>
+    </div>
+  </nav>
+  <!-- Loader -->
+  <div id="loader"></div>
+
+  <!-- Main Content -->
+  <div class="container mt-5 pt-5">
+    <!-- Carousel Slider -->
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="js/img/1.jpg" class="d-block w-100 carousel-image" alt="Image 1">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Clear and Simple File Categories</h5>
+            <p>Organize your documents easily and efficiently.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="js/img/2.jpg" class="d-block w-100 carousel-image" alt="Image 2">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Faster Filing and Retrieval</h5>
+            <p>Save time on filing and searching for documents.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="js/img/banner-electronic-document-management-system.jpg" class="d-block w-100 carousel-image" alt="Image 3">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Less Time Spent on Filing</h5>
+            <p>Speed up your document management process.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="js/img/6.jpg" class="d-block w-100 carousel-image" alt="Image 4">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Less Time Spent on Filing</h5>
+            <p>Speed up your document management process.</p>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Bootstrap 5 JS, Popper, and jQuery -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/js/jssor.slider-27.5.0.min.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // Initialize JSSOR slider here if needed
+
+      // Hide loader after content loads
+      window.onload = function() {
+        document.getElementById('loader').style.display = 'none';
+      };
+    });
+  </script>
+</body>
+
+</html>
